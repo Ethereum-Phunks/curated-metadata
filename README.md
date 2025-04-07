@@ -1,4 +1,4 @@
-# Ethereum Phunks Market Curated Collections Metadata
+# Curated Collections Metadata
 
 This repository contains metadata for collections curated on the Ethereum Phunks marketplace. It serves as a public resource for builders and tinkerers who want to work with the metadata of collections featured on our platform.
 
