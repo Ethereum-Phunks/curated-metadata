@@ -22,10 +22,8 @@ import { Metadata, CollectionMetadata, CollectionItem, Attribute } from './types
 ### Example Usage
 
 ```typescript
-import { Metadata } from './types';
-
-// Load metadata for a specific collection
-const dystoPhunksMetadata: CollectionMetadata = require('./metadata/dysto-phunks.json');
+import { CollectionMetadata } from './types';
+import dystoPhunksMetadata from './metadata/dysto-phunks.json';
 
 // Access collection information
 console.log(dystoPhunksMetadata.name);
@@ -35,6 +33,12 @@ console.log(dystoPhunksMetadata.description);
 const firstItem = dystoPhunksMetadata.collection_items[0];
 console.log(firstItem.name);
 console.log(firstItem.attributes);
+
+// Or load dynamically
+import fs from 'fs';
+const collectionData: CollectionMetadata = JSON.parse(
+  fs.readFileSync('./metadata/ethereum-phunks.json', 'utf8')
+);
 ```
 
 ## Metadata Structure
